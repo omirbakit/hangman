@@ -11,7 +11,7 @@ require_relative 'lib/game'
 
 puts "Всем привет!"
 
-word = File.readlines(__dir__ + '/data/words.txt', encoding: 'UTF-8', chomp: true).sample.upcase
+word = File.readlines(__dir__ + '/data/words.txt', encoding: 'UTF-8', chomp: true).sample
 
 game = Game.new(word)
 console_interface = ConsoleInterface.new(game)
