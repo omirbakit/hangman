@@ -9,12 +9,10 @@ class ConsoleInterface
   end
 
   def print_out
-    puts <<~END
-      Слово: #{word_to_show}
-     #{figure}
-      Ошибки (#{@game.errors_made}): #{errors_to_show}
-      У вас осталось ошибок: #{@game.errors_allowed}
-    END
+    puts  "Слово: #{word_to_show}".green
+    puts  "#{figure}".light_yellow
+    puts  "Ошибки (#{@game.errors_made}): #{errors_to_show}".light_red
+    puts  "У вас осталось ошибок: #{@game.errors_allowed}".light_blue
 
     if @game.won?
       puts "Поздравляем, вы выграли!"
